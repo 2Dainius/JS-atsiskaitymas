@@ -9,5 +9,21 @@ Paspaudus mygtuką "Show users":
 
 Pastaba: Informacija apie user'į (jo kortelė) bei turi turėti bent minimalų stilių;
 -------------------------------------------------------------------------- */
-
 const ENDPOINT = 'https://api.github.com/users';
+const OUTPUT = document.querySelector('#output')
+const BTN = document.querySelector('#btn')
+BTN.addEventListener('click', () => {
+    fetch(ENDPOINT)
+    .then(data => data.json())
+    .then(data => {
+        OUTPUT.innerHTML = ''
+        data.forEach(item => {
+            OUTPUT.innerHTML += `
+                <div>
+                    <h2>${item.login}</h2>
+                    <img src="${item.avatar_url}">
+                </div>
+            `
+        });
+    })
+})

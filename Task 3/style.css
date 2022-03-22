@@ -53,9 +53,27 @@
 }
 
 .output-cointainer #output {
-  width: 80%;
+  width: 70%;
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#output div img{
+  width: 150px;
+  margin-top: 15px;
+}
+
+#output div {
+  text-align: center;
+  border: solid 3px black;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: goldenrod;
 }
