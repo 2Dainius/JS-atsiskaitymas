@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Weight Converter</title>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Custom JS -->
-    <script defer src="./script.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Weight Converter</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Custom JS -->
+  <script defer src="./script.js"></script>
+</head>
+
+<body>
+  <div class="container">
     <header>
-      <!-- Header code-->
+      <h1>Weight Converter</h1>
     </header>
-
-    <main>
-      <div class="wrapper">
-        <h1 class="headline">Weight Converter</h1>
-        <!-- Users input -->
-        <form>
-          <input type="text" id="search" placeholder="Enter kilograms..." />
-          <input type="submit" id="submit-btn" value="Calculate" />
-        </form>
-        <!-- Place for output after form submission -->
-        <div id="output"></div>
+    <section>
+      <div id="input">
+        <form name="weightSelect" id="weightType">Kilograms</form>
+        <input type="number" id="weightValue" value="0">
       </div>
-    </main>
+      <div id="output">
+        <div class="card kilos" id="lbCard">
+          <h3>Pounds</h3>
+          <h4 id="toPounds"></h4>
+        </div>
 
-    <footer>
-      <!-- Footer code -->
-    </footer>
-  </body>
+        <div class="card grams" id="gmCard">
+          <h3>Grams</h3>
+          <h4 id="toGrams"></h4>
+        </div>
+        <div class="card ounces" id="ozCard">
+          <h3>Ounces</h3>
+          <h4 id="toOunces"></h4>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <!-- Footer code -->
+  </footer>
+</body>
+
 </html>
