@@ -8,5 +8,24 @@ nurodomas gamintojas ir jo pagaminti modeliai.
 Pastaba: Informacija apie automobilį (brand) (jo kortelė) bei turi turėti 
 bent minimalų stilių;
 -------------------------------------------------------------------------- */
-
 const ENDPOINT = 'cars.json';
+const OUTPUT = document.querySelector('#output')
+
+fetch(ENDPOINT)
+.then(data => data.json())
+.then(data => {
+    data.forEach(item => {
+        let models = ''
+        item.models.forEach(element => models += `<span>${element}</span>`)
+        OUTPUT.innerHTML += `
+        <div>
+            <h1>${item.brand}</h1>
+            <h3>Models:</h3>
+            <div class="model">
+            ${models}
+            </div>
+        </div>
+        `
+    })
+   
+})
